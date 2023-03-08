@@ -10,8 +10,8 @@ ALTER DATABASE QLSV COLLATE VIETNAMESE_CI_AS;
 
 Create Login mylogin with password='mylogin',
 CHECK_POLICY = OFF
-Use QLSV;
 sp_changedbowner mylogin
+Use QLSV;
 
 INSERT INTO SINHVIEN VALUES ('B1910726',N'Nguyễn Khánh Vinh',1,'DI19V7F1');
 INSERT INTO SINHVIEN VALUES ('B1910609',N'Lăng Trường An',1,'DI19V7F1');
