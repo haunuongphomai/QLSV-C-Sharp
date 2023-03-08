@@ -61,11 +61,11 @@
                     </Columns>
                 </asp:GridView>
 
-               <asp:GridView ID="grvStudent2" runat="server">
+                <asp:GridView ID="grvStudent2" runat="server"
+                    Height="100px" Width="600px">
                 </asp:GridView>
             </form>
         </div>
     </div>
-
 </body>
 </html>

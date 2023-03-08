@@ -1,17 +1,34 @@
 ﻿USE QLSV;
 
 CREATE TABLE SINHVIEN(
-	MASV NVARCHAR(8) PRIMARY KEY,
-	TENSV NVARCHAR(MAX),
+	MASV INT PRIMARY KEY,
+	TENSV NVARCHAR(30),
 	PHAI BIT,
-	LOP NVARCHAR(30)
+	LOP NVARCHAR(30),
+	SDT NVARCHAR(30),
+	EMAIL NVARCHAR(30)
 );
+drop table sinhvien;
 ALTER DATABASE QLSV COLLATE VIETNAMESE_CI_AS;
-
+alter table sinhvien add sdt nvarchar(30), email nvarchar(30)
 Create Login mylogin with password='mylogin',
-CHECK_POLICY = OFF
+CHECK_POLICY = OFF;
 sp_changedbowner mylogin
 Use QLSV;
+
+insert into sinhvien values (1, 'phuc', 1, 'F1', '09xxxxxxxxx', 'phuc@gmail.com')
+insert into sinhvien values (2, 'hao', 1, 'F1', '09xxxxxxxxx', 'hao@gmail.com')
+insert into sinhvien values (3, 'loc', 1, 'F2', '09xxxxxxxxx', 'loc@gmail.com')
+insert into sinhvien values (4, 'minh', 1, 'F2', '09xxxxxxxxx', 'minh@gmail.com')
+insert into sinhvien values (5, 'ngoc', 0, 'F3', '09xxxxxxxxx', 'ngoc@gmail.com')
+insert into sinhvien values (6, 'dieu', 0, 'F3', '09xxxxxxxxx', 'dieu@gmail.com')
+
+insert into sinhvien values (7, 'thao', 0, 'F2', '09xxxxxxxxx', 'thao@gmail.com')
+insert into sinhvien values (8, 'dong', 1, 'F2', '09xxxxxxxxx', 'dong@gmail.com')
+insert into sinhvien values (9, 'khang', 1, 'F1', '09xxxxxxxxx', 'khang@gmail.com')
+insert into sinhvien values (10, 'trieu', 1, 'F1', '09xxxxxxxxx', 'trieu@gmail.com')
+insert into sinhvien values (11, 'an', 1, 'F1', '09xxxxxxxxx', 'an@gmail.com')
+insert into sinhvien values (12, 'khoa', 1, 'F3', '09xxxxxxxxx', 'khoa@gmail.com')
 
 INSERT INTO SINHVIEN VALUES ('B1910726',N'Nguyễn Khánh Vinh',1,'DI19V7F1');
 INSERT INTO SINHVIEN VALUES ('B1910609',N'Lăng Trường An',1,'DI19V7F1');
