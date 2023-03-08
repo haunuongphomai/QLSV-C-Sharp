@@ -30,7 +30,12 @@ tr:nth-child(even) {
 tr:not(:first-child):hover {
     background-color: #ECF9FF;
 }
+
 .griv {
     font-size: 18px;
     font-family: 'Roboto Mono', monospace;
+}
+
+.griv-2 {
+    margin-top: 20px;
 }
